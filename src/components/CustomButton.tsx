@@ -5,15 +5,16 @@ export default function CustomButton({
   title,
   containerStyles,
   handleClick,
+  btnType,
 }: CustomButtonProps) {
   return (
     <button
       disabled={false}
-      type={'button'}
+      type={btnType || 'button'}
       className={`custom-btn ${containerStyles}`}
-      onClick={() => {}}
+      onClick={handleClick}
     >
-      <span className={`flex-1`}>title</span>
+      <span className={`flex-1`}>{title}</span>
     </button>
   );
 }
